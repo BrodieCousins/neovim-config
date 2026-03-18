@@ -26,9 +26,8 @@ return {
                 },
             })
             vim.lsp.enable('lua_ls')
-
-            -- Enable typescript 
             vim.lsp.enable('ts_ls')
+            vim.lsp.enable('pylsp')
 
             local base_on_attach = vim.lsp.config.eslint.on_attach
             vim.lsp.config("eslint", {
