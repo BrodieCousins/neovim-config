@@ -3,7 +3,6 @@ vim.cmd.colorscheme("unokai")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
-
 -- key mappings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -102,7 +101,7 @@ vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 
 -- system clipboard setup
 local systemName = vim.loop.os_uname().sysname
-if systemName ~= "Darwin" then
+if systemName ~= "Linux" and systemName ~= "Darwin" then
     vim.g.clipboard = {
         name = 'WslClipboard',
         copy = {
